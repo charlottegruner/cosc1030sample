@@ -20,12 +20,13 @@ int main()
     ifstream inputFile;
     inputFile.open("backstory.txt");
     string line;
-    do
+    
+    while (getline(inputFile, line))
     {
-        getline(inputFile, line);
         printWithTypingEffect(line, 2);
-    } while(inputFile); 
-    inputFile.close();  
+    }
+
+    inputFile.close();
 
     // Write the rest of the game here......
 }
